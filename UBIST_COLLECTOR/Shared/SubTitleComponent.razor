@@ -1,0 +1,12 @@
+﻿
+@if(title != null)
+{
+    <MudContainer Class="mt-5" MaxWidth="MaxWidth.ExtraLarge">
+        <MudText Typo="Typo.h5" GutterBottom="true">@title</MudText>   
+    </MudContainer>
+}
+
+@code {
+    [Parameter]
+    public string? title{ get; set; }
+}

@@ -1,0 +1,14 @@
+﻿@using UBIST_COLLECTOR.Shared;
+
+<MudContainer Class="mt-16" MaxWidth="MaxWidth.ExtraLarge">
+    <MudText Typo="Typo.h4" Class="lg" GutterBottom="true">@title</MudText>
+    <SubTitleComponent title=@subtitle></SubTitleComponent>
+</MudContainer>
+
+@code {
+    [Parameter]
+    public string? title{ get; set; }
+
+    [Parameter]
+    public string? subtitle{ get; set; }
+}

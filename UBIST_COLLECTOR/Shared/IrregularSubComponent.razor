@@ -1,0 +1,27 @@
+﻿@using UBIST_COLLECTOR.Shared;
+
+
+<SubTitleComponent title=@title></SubTitleComponent>
+<MudGrid Spacing="3" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="400px" Width="600px" MinWidth="400px"></MudPaper>
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="400px" Width="600px" MinWidth="400px"></MudPaper>
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="400px" Width="600px" MinWidth="400px"></MudPaper>
+    </MudItem>
+</MudGrid>
+
+@code {
+    [Parameter]
+    public string? sequence{get;set;}
+
+    public string title = @DateTime.Now.ToString("yyyy년 MM월") + "비정기 수집_";
+
+    protected override void OnParametersSet()
+    {
+        title = title +  sequence + @DateTime.Now.ToString("yyyy년 MM월 dd일") + " ~ " + @DateTime.Now.ToString("yyyy년 MM월 dd일");
+    }
+}

@@ -1,0 +1,23 @@
+﻿@using UBIST_COLLECTOR.Shared;
+
+
+<TitleComponent title=@title subTitle=@subTitle></TitleComponent>
+<MudGrid Spacing="3" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Width="600px" Height="400px" Class="mud-theme-dark" MinWidth="400px"></MudPaper>
+        @*<DataIndicatorCard></DataIndicatorCard>*@
+    </MudItem>    
+    <MudItem>
+        <MudPaper Width="600px" Height="400px"></MudPaper>
+        @*<DataIndicatorCard></DataIndicatorCard>*@
+    </MudItem>    
+    <MudItem> 
+        <MudPaper Width="600px" Height="400px"></MudPaper>
+        @*<DataIndicatorCard></DataIndicatorCard>*@
+    </MudItem>    
+</MudGrid>
+
+@code {
+    public string title = "DB Sync 현황 : " + @DateTime.Now.ToString("yyyy년 MM월 dd일");
+    public string subTitle =  "동기화 시간 : " + @DateTime.Now.ToString("yyyy년 MM월 dd일 HH시 mm분");
+}
