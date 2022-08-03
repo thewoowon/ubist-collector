@@ -1,0 +1,28 @@
+﻿
+<MudPaper Class="mud-pager-res-four mud-pager-hover" MinWidth="400px" Height="200px" MaxWidth="500px" Elevation="5">
+    <MudPaper Class="wing-decoration-short-1"></MudPaper>
+    <MudPaper Class="wing-decoration-short-2"></MudPaper>
+    <MudPaper Class="wing-decoration-short-3"></MudPaper>
+    <MudContainer Class="pt-8 pl-8" Style="height:60px;">
+        <MudText Typo="Typo.h5" Style="font-weight:700">@title</MudText>
+    </MudContainer>
+    <MudContainer Class="d-flex justify-center align-center">
+        <MudText Typo="Typo.h3" Style="font-weight:700">@figure</MudText>
+    </MudContainer>
+    <MudContainer Class="d-flex justify-center align-center">
+        <MudText Typo="Typo.h6">Source : @amount</MudText>
+    </MudContainer>
+</MudPaper>
+
+@code {
+    [Parameter]
+    public string? title{ get; set; }
+
+    [Parameter]
+    public string? figure{ get; set; }
+
+    [Parameter]
+    public string? amount{ get; set; }
+
+
+}

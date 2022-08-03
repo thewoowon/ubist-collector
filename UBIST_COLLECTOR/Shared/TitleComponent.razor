@@ -1,9 +1,16 @@
 ﻿@using UBIST_COLLECTOR.Shared;
 
-<MudContainer Class="mt-16" MaxWidth="MaxWidth.ExtraLarge">
-    <MudText Typo="Typo.h4" Class="lg" GutterBottom="true">@title</MudText>
-    <SubTitleComponent title=@subtitle></SubTitleComponent>
-</MudContainer>
+    <MudContainer Class="mt-16" MaxWidth="MaxWidth.ExtraLarge">
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="d-flex">
+            <MudAvatar Color="Color.Primary" Class="z-30 mr-n5" Size="Size.Medium"></MudAvatar>
+            <MudAvatar Color="Color.Secondary" Class="z-20 mr-n5" Size="Size.Medium"></MudAvatar>
+            <MudAvatar Color="Color.Tertiary" Class="z-10 mr-n5" Size="Size.Medium"></MudAvatar>
+            <MudText Typo="Typo.h4" Class="lg mx-10" Style="font-weight:700" GutterBottom="true">@title</MudText>
+        </MudContainer>
+        <SubTitleComponent title=@subtitle detail=@detail></SubTitleComponent>
+        <MudContainer></MudContainer>
+    </MudContainer>
+
 
 @code {
     [Parameter]
@@ -11,4 +18,7 @@
 
     [Parameter]
     public string? subtitle{ get; set; }
+
+    [Parameter]
+    public bool detail{ get; set; }
 }

@@ -1,0 +1,9 @@
+﻿@page "/detail/{id:int}"
+
+<h1>Type is @id</h1>
+
+
+@code {
+    [Parameter]
+    public int? id{ get; set; }
+}

@@ -1,12 +1,31 @@
 ﻿
 @if(title != null)
 {
-    <MudContainer Class="mt-5" MaxWidth="MaxWidth.ExtraLarge">
-        <MudText Typo="Typo.h5" GutterBottom="true">@title</MudText>   
-    </MudContainer>
+    if(detail)
+    {
+        <MudContainer Class="my-5 d-flex align-center" MaxWidth="MaxWidth.ExtraLarge">
+            <MudContainer Class="d-flex justify-start align-center mud-height-full"> 
+                <MudText Typo="Typo.h5" Style="font-weight:700" GutterBottom="true">@title</MudText>   
+            </MudContainer>
+            <MudContainer Class="d-flex justify-end align-center mud-height-full">
+                > &nbsp<MudLink Href="/detail/123" Class="link-decoration" Underline="Underline.Hover"  Color="Color.Dark">상세보기</MudLink>
+            </MudContainer>
+        </MudContainer>
+    }
+    else
+    {
+        <MudContainer Class="my-5" MaxWidth="MaxWidth.ExtraLarge">
+            <MudContainer Class="mud-width-full" MaxWidth="MaxWidth.ExtraLarge">
+                <MudText Typo="Typo.h5" Style="font-weight:700" GutterBottom="true">@title</MudText>   
+            </MudContainer>
+        </MudContainer>
+    }
 }
 
 @code {
     [Parameter]
     public string? title{ get; set; }
+
+    [Parameter]
+    public bool detail{ get; set; }
 }
