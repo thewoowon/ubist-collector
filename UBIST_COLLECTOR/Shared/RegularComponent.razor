@@ -1,17 +1,15 @@
 ﻿@using UBIST_COLLECTOR.Shared;
 
 
-<TitleComponent title=@title subTitle=@subTitle detail="true"></TitleComponent>
+<TitleComponent title=@title subTitle=@subTitle></TitleComponent>
 <MudGrid  Spacing="4" Justify="Justify.Center">
     <MudItem >
-        <MudPaper Class="mud-pager-res-chart mud-pager-hover" Height="600px" MaxWidth="900px"  Elevation="5" MinWidth="400px">
-            <RegularSubComponent title="데이터 수집률" figure="97.6%" difference="+1.0%"></RegularSubComponent>
+        <MudPaper Height="500px" Width="900px" MinWidth="400px">
             <Chart1></Chart1>
         </MudPaper>
     </MudItem>
     <MudItem>
-        <MudPaper Class="mud-pager-res-chart mud-pager-hover" Height="600px" MaxWidth="900px"  Elevation="5" MinWidth="400px">
-            <RegularSubComponent title="데이터 수집 건수" figure="1,324,528" difference="-1,000"></RegularSubComponent>
+        <MudPaper Height="500px" Width="900px">
             <Chart2></Chart2>
         </MudPaper>
     </MudItem>

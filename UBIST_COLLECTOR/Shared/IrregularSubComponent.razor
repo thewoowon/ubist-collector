@@ -1,21 +1,16 @@
 ﻿@using UBIST_COLLECTOR.Shared;
 
 
-<MudContainer Class="mud-width-full" MaxWidth="MaxWidth.ExtraLarge">
-    <SubTitleComponent title=@title detail="true"></SubTitleComponent>
-</MudContainer>
+<SubTitleComponent title=@title></SubTitleComponent>
 <MudGrid Spacing="3" Justify="Justify.Center">
     <MudItem>
-        <MudFourInstanceComponent title="데이터 수집률" figure="97.6%"></MudFourInstanceComponent>
+        <MudPaper Height="400px" Width="600px" MinWidth="400px"></MudPaper>
     </MudItem>
     <MudItem>
-        <MudFourInstanceComponent title="수집/미수신/미수집 패널 수" figure="4500/10/12"></MudFourInstanceComponent>
+        <MudPaper Height="400px" Width="600px" MinWidth="400px"></MudPaper>
     </MudItem>
     <MudItem>
-        <MudFourInstanceComponent title="데이터 수집 건수" figure="1,324,528"></MudFourInstanceComponent>
-    </MudItem>
-    <MudItem>
-        <MudFourInstanceComponent title="처방전 수" figure="424,528"></MudFourInstanceComponent>
+        <MudPaper Height="400px" Width="600px" MinWidth="400px"></MudPaper>
     </MudItem>
 </MudGrid>
 
@@ -23,7 +18,7 @@
     [Parameter]
     public string? sequence{get;set;}
 
-    public string title = @DateTime.Now.ToString("yyyy년 MM월") + " 비정기 수집_";
+    public string title = @DateTime.Now.ToString("yyyy년 MM월") + "비정기 수집_";
 
     protected override void OnParametersSet()
     {

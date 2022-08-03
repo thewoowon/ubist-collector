@@ -8,8 +8,6 @@
     <MudAppBar Color="Color.Dark" Elevation="0">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
         <MudSpacer />
-        <MudText>이정재</MudText>
-        <MudAvatar Class="mx-3" Image="/assets/jj.jpg" Alt="User"></MudAvatar>
         <MudIconButton Icon="@Icons.Material.Filled.Logout" Color="Color.Inherit" Link="/login" Target="_blank" />
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Elevation="1"> 
@@ -24,19 +22,7 @@
         <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="my-16 mud-width-full mx-auto">
             @Body
         </MudContainer>
-        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="mt-16 mud-width-full px-0">
-            <MudGrid Class="mud-width-full mud-theme-dark" Justify="Justify.Center">
-                <MudItem>
-                    <MudPaper Height="400px" Class="mud-theme-dark d-flex justify-center align-center" Elevation="0">
-                        <MudText Color="Color.Tertiary" Typo="Typo.h3">
-                            UBIST ADMIN
-                        </MudText>
-                    </MudPaper>
-                </MudItem>
-            </MudGrid>
-        </MudContainer>
     </MudMainContent>
-
 </MudLayout>
 
 @code {
