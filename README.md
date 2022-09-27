@@ -1,1 +1,1 @@
-# UBIST_COLLECTOR
+# ubist-collector
